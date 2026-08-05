@@ -7,9 +7,7 @@
     <title>{% block title %}SmartNotes AI{% endblock %}</title>
 
     <!-- Google Font -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
@@ -18,14 +16,12 @@
     />
 
     <!-- Font Awesome -->
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
     />
 
     <!-- CSS -->
-
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/style.css') }}"
@@ -33,8 +29,19 @@
   </head>
 
   <body>
-    {% include "layout/navbar.html" %} {% block content %} {% endblock %} {%
-    include "layout/footer.html" %}
+    {% include "layout/navbar.html" %} {% with messages =
+    get_flashed_messages(with_categories=true) %} {% if messages %}
+
+    <div class="flash-container">
+      {% for category, message in messages %}
+
+      <div class="flash-message {{ category }}">{{ message }}</div>
+
+      {% endfor %}
+    </div>
+
+    {% endif %} {% endwith %} {% block content %} {% endblock %} {% include
+    "layout/footer.html" %}
 
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   </body>

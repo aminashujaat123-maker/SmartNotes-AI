@@ -1,0 +1,38 @@
+{% extends "layout/base.html" %} {% block title %}Dashboard{% endblock %} {%
+block content %}
+
+<section class="dashboard">
+  <div class="dashboard-container">
+    <h1>Welcome, {{ current_user.full_name }} 👋</h1>
+
+    <p>{{ current_user.email }}</p>
+
+    <div class="dashboard-cards">
+      <div class="card">
+        <h3>Total Notes</h3>
+
+        <p>0</p>
+      </div>
+
+      <div class="card">
+        <h3>Favorites</h3>
+
+        <p>0</p>
+      </div>
+
+      <div class="card">
+        <h3>AI Summaries</h3>
+
+        <p>0</p>
+      </div>
+
+      <div class="card">
+        <h3>AI Quizzes</h3>
+
+        <p>0</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
