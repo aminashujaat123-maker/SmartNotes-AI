@@ -1,0 +1,298 @@
+{% extends "layout/base.html" %} {% block title %} Home {% endblock %} {% block
+content %}
+
+<section class="hero">
+  <div class="container hero-container">
+    <div class="hero-text">
+      <span class="badge"> 🚀 AI Powered Notes </span>
+
+      <h1>
+        Organize Your Notes
+
+        <span>Smarter With AI</span>
+      </h1>
+
+      <p>
+        Create notes, summarize long content, search instantly and stay
+        productive with SmartNotes AI.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="/signup" class="btn-primary"> Get Started </a>
+
+        <a href="/login" class="btn-secondary"> Login </a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img
+        src="{{ url_for('static', filename='images/hero.svg') }}"
+        alt="Smart Notes AI"
+      />
+    </div>
+  </div>
+</section>
+<section class="stats">
+  <div class="stat-box">
+    <h2>10K+</h2>
+    <p>Notes Created</p>
+  </div>
+
+  <div class="stat-box">
+    <h2>95%</h2>
+    <p>AI Accuracy</p>
+  </div>
+
+  <div class="stat-box">
+    <h2>5K+</h2>
+    <p>Happy Students</p>
+  </div>
+
+  <div class="stat-box">
+    <h2>24/7</h2>
+    <p>Available</p>
+  </div>
+</section>
+<!-- ===========================
+     FEATURES
+=========================== -->
+
+<section class="features" id="features">
+  <div class="section-title">
+    <h2>Powerful Features</h2>
+
+    <p>
+      Everything you need to organize, summarize and manage your notes with
+      Artificial Intelligence.
+    </p>
+  </div>
+
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="icon">📝</div>
+
+      <h3>Smart Notes</h3>
+
+      <p>Create beautiful notes with formatting support.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon">🤖</div>
+
+      <h3>AI Summarizer</h3>
+
+      <p>Convert long notes into short and meaningful summaries.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon">🔍</div>
+
+      <h3>Instant Search</h3>
+
+      <p>Find any note within seconds using AI powered search.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon">🏷️</div>
+
+      <h3>Tags</h3>
+
+      <p>Organize notes with custom tags for faster access.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon">📂</div>
+
+      <h3>Categories</h3>
+
+      <p>Keep your study material properly organized.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon">📊</div>
+
+      <h3>Dashboard</h3>
+
+      <p>Track your productivity and note statistics.</p>
+    </div>
+  </div>
+</section>
+<!-- ===========================
+        ABOUT
+=========================== -->
+
+<section class="about" id="about">
+  <div class="about-image">
+    <img
+      src="{{ url_for('static', filename='images/about.svg') }}"
+      alt="About SmartNotes AI"
+    />
+  </div>
+
+  <div class="about-content">
+    <span>ABOUT SMARTNOTES AI</span>
+
+    <h2>Study Smarter With Artificial Intelligence</h2>
+
+    <p>
+      SmartNotes AI helps students and professionals create, organize and
+      summarize notes using Artificial Intelligence. Save time, stay productive
+      and never lose important information.
+    </p>
+
+    <div class="about-list">
+      <div class="about-item">
+        <div class="check">✓</div>
+
+        <div>
+          <h4>AI Powered Summaries</h4>
+
+          <p>Generate concise summaries instantly.</p>
+        </div>
+      </div>
+
+      <div class="about-item">
+        <div class="check">✓</div>
+
+        <div>
+          <h4>Secure Cloud Storage</h4>
+
+          <p>Your notes remain safe and accessible.</p>
+        </div>
+      </div>
+
+      <div class="about-item">
+        <div class="check">✓</div>
+
+        <div>
+          <h4>Organized Dashboard</h4>
+
+          <p>Manage all your notes from one place.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===========================
+        AI WORKFLOW
+=========================== -->
+
+<section class="workflow">
+  <div class="section-title">
+    <h2>How SmartNotes AI Works</h2>
+
+    <p>Create notes in seconds with our simple AI powered workflow.</p>
+  </div>
+
+  <div class="workflow-container">
+    <div class="workflow-card">
+      <div class="workflow-number">1</div>
+
+      <div class="workflow-icon">📝</div>
+
+      <h3>Create Notes</h3>
+
+      <p>Write or paste your study notes into SmartNotes AI.</p>
+    </div>
+
+    <div class="workflow-arrow">→</div>
+
+    <div class="workflow-card">
+      <div class="workflow-number">2</div>
+
+      <div class="workflow-icon">🤖</div>
+
+      <h3>AI Analysis</h3>
+
+      <p>Artificial Intelligence understands your content.</p>
+    </div>
+
+    <div class="workflow-arrow">→</div>
+
+    <div class="workflow-card">
+      <div class="workflow-number">3</div>
+
+      <div class="workflow-icon">⚡</div>
+
+      <h3>Generate Summary</h3>
+
+      <p>Instantly receive short and meaningful summaries.</p>
+    </div>
+
+    <div class="workflow-arrow">→</div>
+
+    <div class="workflow-card">
+      <div class="workflow-number">4</div>
+
+      <div class="workflow-icon">📥</div>
+
+      <h3>Save & Export</h3>
+
+      <p>Save your notes or export them as PDF.</p>
+    </div>
+  </div>
+</section>
+<!-- ===========================
+        TESTIMONIALS
+=========================== -->
+
+<section class="testimonials">
+  <div class="section-title">
+    <h2>What Students Say</h2>
+
+    <p>Trusted by students who want smarter and faster learning.</p>
+  </div>
+
+  <div class="testimonial-grid">
+    <div class="testimonial-card">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+
+      <p>
+        SmartNotes AI helped me summarize my lecture notes in minutes. It saved
+        me hours every week.
+      </p>
+
+      <h4>Sarah Ahmed</h4>
+
+      <span>Computer Science Student</span>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+
+      <p>
+        The interface is simple and beautiful. Finding notes is incredibly fast.
+      </p>
+
+      <h4>Ali Hassan</h4>
+
+      <span>Software Engineering Student</span>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+
+      <p>AI summaries helped me revise for exams much more efficiently.</p>
+
+      <h4>Emily Johnson</h4>
+
+      <span>Medical Student</span>
+    </div>
+  </div>
+</section>
+<!-- ===========================
+        CTA
+=========================== -->
+
+<section class="cta">
+  <h2>Ready to Study Smarter?</h2>
+
+  <p>
+    Join thousands of students using SmartNotes AI to organize, summarize and
+    manage their notes.
+  </p>
+
+  <a href="/signup" class="btn-primary"> Get Started Free </a>
+</section>
+
+{% endblock %}
