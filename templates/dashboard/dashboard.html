@@ -1,37 +1,82 @@
-{% extends "layout/base.html" %} {% block title %}Dashboard{% endblock %} {%
-block content %}
+{% extends "layout/base.html" %} {% block title %}Dashboard{% endblock %}
+{%block content %}
 
 <section class="dashboard">
-  <div class="dashboard-container">
-    <h1>Welcome, {{ current_user.full_name }} 👋</h1>
+  <div class="dashboard-header">
+    <div class="header-left">
+      <h1>Hello, {{ user.full_name }} 👋</h1>
 
-    <p>{{ current_user.email }}</p>
+      <p>Welcome back! Organize your notes smarter with AI.</p>
+    </div>
 
-    <div class="dashboard-cards">
-      <div class="card">
-        <h3>Total Notes</h3>
+    <div class="header-right">
+      <a href="{{ url_for('notes.create_note') }}" class="btn-primary">
+        + New Note
+      </a>
+    </div>
+  </div>
 
-        <p>0</p>
-      </div>
+  <div class="stats-container">
+    <div class="stat-card">
+      <h2>{{ notes|length }}</h2>
+      <p>Total Notes</p>
+    </div>
 
-      <div class="card">
-        <h3>Favorites</h3>
+    <div class="stat-card">
+      <h2>{{ user.full_name }}</h2>
+      <p>Current User</p>
+    </div>
 
-        <p>0</p>
-      </div>
+    <div class="stat-card">
+      <h2>SmartNotes AI</h2>
+      <p>Your Workspace</p>
+    </div>
+  </div>
 
-      <div class="card">
-        <h3>AI Summaries</h3>
+  <div class="notes-grid">
+    {% if notes %} {% for note in notes %}
 
-        <p>0</p>
-      </div>
+    <div class="note-card">
+      <h3>{{ note.title }}</h3>
 
-      <div class="card">
-        <h3>AI Quizzes</h3>
+      <p>
+        {{ note.content[:150] }}{% if note.content|length > 150 %}...{% endif %}
+      </p>
 
-        <p>0</p>
+      <small> {{ note.created_at.strftime('%d %b %Y') }} </small>
+
+      <div class="note-actions">
+        <a
+          href="{{ url_for('notes.edit_note', note_id=note.id) }}"
+          class="btn-primary"
+        >
+          Edit
+        </a>
+
+        <form
+          action="{{ url_for('notes.delete_note', note_id=note.id) }}"
+          method="POST"
+        >
+          <button
+            type="submit"
+            class="btn-danger"
+            onclick="return confirm('Delete this note?');"
+          >
+            Delete
+          </button>
+        </form>
       </div>
     </div>
+
+    {% endfor %} {% else %}
+
+    <div class="empty-state">
+      <h2>No Notes Yet</h2>
+
+      <p>Create your first note to start your productivity journey.</p>
+    </div>
+
+    {% endif %}
   </div>
 </section>
 

@@ -1,0 +1,36 @@
+{% extends "layout/base.html" %} {% block title %}Create Note{% endblock %} {%
+block content %}
+
+<section class="create-note-section">
+  <div class="create-note-container">
+    <h1>Create New Note</h1>
+
+    <form method="POST">
+      <div class="form-group">
+        <label>Title</label>
+
+        <input
+          type="text"
+          name="title"
+          placeholder="Enter note title"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Content</label>
+
+        <textarea
+          name="content"
+          rows="12"
+          placeholder="Write your note here..."
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary">Save Note</button>
+    </form>
+  </div>
+</section>
+
+{% endblock %}
