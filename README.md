@@ -74,7 +74,8 @@ SmartNotes-AI/
 
 ## Screenshots
 
-_Add your app screenshots here._
+<img width="1916" height="1138" alt="image" src="https://github.com/user-attachments/assets/154de3cc-112c-4df1-851a-1821deac0d1e" />
+
 
 ## License
 
