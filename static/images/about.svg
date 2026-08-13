@@ -1,0 +1,53 @@
+<svg width="500" height="460" viewBox="0 0 500 460" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="aboutGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background blob -->
+  <circle cx="250" cy="230" r="200" fill="#f8fafc"/>
+  <ellipse cx="250" cy="230" rx="200" ry="190" fill="#eff6ff"/>
+
+  <!-- Big folder shape -->
+  <g transform="translate(90,110)">
+    <path d="M0 30 h110 l20 24 h190 v190 a14 14 0 0 1 -14 14 H14 A14 14 0 0 1 0 244 Z" fill="#dbeafe"/>
+    <path d="M0 60 h306 v184 a14 14 0 0 1 -14 14 H14 A14 14 0 0 1 0 244 Z" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  </g>
+
+  <!-- Checklist card -->
+  <g transform="translate(130,150)">
+    <rect width="230" height="150" rx="14" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+
+    <circle cx="30" cy="30" r="12" fill="url(#aboutGrad1)"/>
+    <path d="M24 30 l4 4 8 -8" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="52" y="24" width="150" height="10" rx="5" fill="#1f2937"/>
+
+    <circle cx="30" cy="68" r="12" fill="url(#aboutGrad1)"/>
+    <path d="M24 68 l4 4 8 -8" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="52" y="62" width="120" height="10" rx="5" fill="#9ca3af"/>
+
+    <circle cx="30" cy="106" r="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <rect x="52" y="100" width="140" height="10" rx="5" fill="#9ca3af"/>
+  </g>
+
+  <!-- Floating AI badge -->
+  <g transform="translate(330,110)">
+    <circle cx="0" cy="0" r="34" fill="url(#aboutGrad1)"/>
+    <path d="M-10 -2 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4 z" fill="#ffffff" transform="translate(10,-2)"/>
+  </g>
+
+  <!-- Small floating dots -->
+  <g fill="#2563eb">
+    <circle cx="80" cy="330" r="6"/>
+    <circle cx="60" cy="120" r="4"/>
+    <circle cx="410" cy="260" r="5"/>
+  </g>
+
+  <!-- Shield / secure icon -->
+  <g transform="translate(340,290)">
+    <path d="M0 0 L38 0 L38 26 C38 46 19 58 19 58 C19 58 0 46 0 26 Z" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+    <path d="M9 27 l7 7 14 -16" stroke="#2563eb" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

@@ -1,0 +1,81 @@
+# SmartNotes AI 📝🤖
+
+SmartNotes AI is a simple note-taking web application built with Flask. It allows users to sign up, log in, and manage their personal notes through a clean, protected dashboard.
+
+## Features
+
+- 🔐 User authentication (Signup / Login / Logout) with hashed passwords
+- 📊 Protected dashboard showing user stats and notes overview
+- 📝 Create, view, and manage notes
+- 💾 SQLite database with SQLAlchemy ORM
+- 🎨 Responsive UI built with HTML, CSS, and JavaScript
+
+## Tech Stack
+
+- **Backend:** Flask, Flask-SQLAlchemy, Flask-Login, Flask-Bcrypt
+- **Database:** SQLite
+- **Frontend:** HTML, CSS, JavaScript
+
+## Project Structure
+
+```
+SmartNotes-AI/
+│
+├── app/
+│   ├── models/          # Database models (User, Note)
+│   ├── routes/          # Flask blueprints (auth, main, notes)
+│   ├── extensions.py    # Flask extensions setup
+│   └── __init__.py      # App factory
+│
+├── templates/            # Jinja2 HTML templates
+├── static/               # CSS, JS, images
+├── instance/              # SQLite database file
+├── config.py
+└── app.py                # Entry point
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.9+
+- pip
+
+### Installation
+
+1. Clone the repository
+
+   ```bash
+   git clone https://github.com/<your-username>/SmartNotes-AI.git
+   cd SmartNotes-AI
+   ```
+
+2. Create and activate a virtual environment
+
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate      # Windows
+   source venv/bin/activate   # macOS/Linux
+   ```
+
+3. Install dependencies
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Run the application
+
+   ```bash
+   python app.py
+   ```
+
+5. Open your browser at `http://127.0.0.1:5000`
+
+## Screenshots
+
+_Add your app screenshots here._
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).

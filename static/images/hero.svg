@@ -1,0 +1,56 @@
+<svg width="520" height="480" viewBox="0 0 520 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heroGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="heroGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#eff6ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background blob -->
+  <ellipse cx="260" cy="250" rx="230" ry="210" fill="url(#heroGrad2)"/>
+
+  <!-- Floating notes card 1 -->
+  <g transform="translate(60,90) rotate(-8)">
+    <rect width="170" height="120" rx="14" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <rect x="18" y="22" width="90" height="10" rx="5" fill="#2563eb"/>
+    <rect x="18" y="46" width="134" height="8" rx="4" fill="#e5e7eb"/>
+    <rect x="18" y="64" width="110" height="8" rx="4" fill="#e5e7eb"/>
+    <rect x="18" y="82" width="70" height="8" rx="4" fill="#e5e7eb"/>
+  </g>
+
+  <!-- Main laptop/screen -->
+  <g transform="translate(120,150)">
+    <rect x="0" y="0" width="280" height="180" rx="16" fill="#111827"/>
+    <rect x="12" y="12" width="256" height="156" rx="8" fill="#ffffff"/>
+    <rect x="28" y="30" width="120" height="14" rx="7" fill="url(#heroGrad1)"/>
+    <rect x="28" y="58" width="224" height="10" rx="5" fill="#e5e7eb"/>
+    <rect x="28" y="76" width="200" height="10" rx="5" fill="#e5e7eb"/>
+    <rect x="28" y="94" width="160" height="10" rx="5" fill="#e5e7eb"/>
+    <rect x="28" y="120" width="100" height="34" rx="10" fill="#dbeafe"/>
+    <rect x="140" y="120" width="100" height="34" rx="10" fill="#2563eb"/>
+    <!-- stand -->
+    <path d="M110 180 L170 180 L190 210 L90 210 Z" fill="#374151"/>
+  </g>
+
+  <!-- Floating note card 2 -->
+  <g transform="translate(320,260) rotate(6)">
+    <rect width="150" height="100" rx="14" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <circle cx="26" cy="26" r="10" fill="#2563eb"/>
+    <rect x="46" y="20" width="80" height="8" rx="4" fill="#1f2937"/>
+    <rect x="18" y="46" width="114" height="7" rx="3.5" fill="#e5e7eb"/>
+    <rect x="18" y="62" width="90" height="7" rx="3.5" fill="#e5e7eb"/>
+    <rect x="18" y="78" width="60" height="7" rx="3.5" fill="#e5e7eb"/>
+  </g>
+
+  <!-- AI sparkle icons -->
+  <g fill="#2563eb">
+    <path d="M420 120 l6 14 14 6 -14 6 -6 14 -6 -14 -14 -6 14 -6 z"/>
+    <path d="M60 320 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4 z"/>
+    <circle cx="440" cy="220" r="5"/>
+    <circle cx="90" cy="230" r="4"/>
+  </g>
+</svg>
