@@ -1,0 +1,168 @@
+/* ==========================================
+   TABLET (max-width: 900px)
+========================================== */
+
+@media (max-width: 900px) {
+  /* Navbar */
+  .navbar .container {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .nav-links {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  /* Dashboard header */
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px;
+  }
+
+  .header-right {
+    width: 100%;
+  }
+
+  .header-right .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Stats cards - 2 per row */
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Notes grid - 1 per row */
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* About / Auth sections stack */
+  .about {
+    flex-direction: column;
+    padding: 60px 6%;
+  }
+
+  .auth-container {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-left {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+/* ==========================================
+   MOBILE (max-width: 600px)
+========================================== */
+
+@media (max-width: 600px) {
+  /* Navbar */
+  .navbar .container {
+    flex-direction: column;
+    padding: 15px 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Dashboard */
+  .dashboard {
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .dashboard-header {
+    padding: 20px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.6rem;
+  }
+
+  /* Stats cards - 1 per row */
+  .stats-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .stat-card {
+    padding: 22px;
+  }
+
+  /* Note cards */
+  .note-card {
+    padding: 20px;
+  }
+
+  /* Note action buttons stack + full width */
+  .note-actions {
+    flex-direction: column;
+  }
+
+  .note-actions .btn-primary,
+  .note-actions .btn-secondary,
+  .note-actions .btn-danger,
+  .note-actions form {
+    width: 100%;
+  }
+
+  .note-actions .btn-primary,
+  .note-actions .btn-secondary,
+  .note-actions .btn-danger {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .note-actions form button {
+    width: 100%;
+  }
+
+  /* Search bar */
+  .dashboard-search input {
+    padding: 13px 16px;
+    font-size: 14px;
+  }
+
+  /* Create/Edit note forms */
+  .create-note-container {
+    padding: 25px;
+  }
+
+  .create-note-section {
+    margin: 25px auto;
+    padding: 10px;
+  }
+
+  /* Hero section */
+  .hero {
+    padding: 50px 0;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  /* Auth forms */
+  .auth-card {
+    padding: 28px;
+  }
+
+  .auth-left h1 {
+    font-size: 32px;
+  }
+}
