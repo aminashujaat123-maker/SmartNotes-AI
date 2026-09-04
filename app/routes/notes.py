@@ -31,6 +31,20 @@ def create_note():
 
     return render_template("dashboard/create_note.html")
 
+@notes.route("/notes/<int:note_id>")
+@login_required
+def note_details(note_id):
+
+    note = Note.query.filter_by(
+        id=note_id,
+        user_id=current_user.id
+    ).first_or_404()
+
+    return render_template(
+        "dashboard/note_details.html",
+        note=note
+    )
+
 @notes.route("/notes/edit/<int:note_id>", methods=["GET", "POST"])
 @login_required
 def edit_note(note_id):

@@ -15,6 +15,16 @@
       </a>
     </div>
   </div>
+  <div class="dashboard-search">
+    <form method="GET" action="{{ url_for('main.dashboard') }}">
+      <input
+        type="text"
+        name="q"
+        value="{{ search_query }}"
+        placeholder="Search your notes..."
+      />
+    </form>
+  </div>
 
   <div class="stats-container">
     <div class="stat-card">
@@ -37,7 +47,11 @@
     {% if notes %} {% for note in notes %}
 
     <div class="note-card">
-      <h3>{{ note.title }}</h3>
+      <h3>
+        <a href="{{ url_for('notes.note_details', note_id=note.id) }}"
+          >{{ note.title }}</a
+        >
+      </h3>
 
       <p>
         {{ note.content[:150] }}{% if note.content|length > 150 %}...{% endif %}
@@ -71,9 +85,13 @@
     {% endfor %} {% else %}
 
     <div class="empty-state">
+      {% if search_query %}
+      <h2>No notes found</h2>
+      <p>No notes match "{{ search_query }}". Try a different search.</p>
+      {% else %}
       <h2>No Notes Yet</h2>
-
       <p>Create your first note to start your productivity journey.</p>
+      {% endif %}
     </div>
 
     {% endif %}
