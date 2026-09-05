@@ -32,6 +32,11 @@ class Note(db.Model):
         default=datetime.utcnow,
         onupdate=datetime.utcnow
     )
+    
+    summary = db.Column(
+        db.Text,
+        nullable=True
+    )
 
     user_id = db.Column(
         db.Integer,

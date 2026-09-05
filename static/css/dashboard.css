@@ -317,3 +317,30 @@
 .create-note-container textarea {
   resize: vertical;
 }
+/* ==========================================
+   NOTE SUMMARY SECTION
+========================================== */
+
+.note-summary-section {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.note-summary-section h3 {
+  color: #4f46e5;
+  margin-bottom: 12px;
+}
+
+.note-summary-section p {
+  color: #374151;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.no-summary-text {
+  color: #9ca3af;
+  font-style: italic;
+}

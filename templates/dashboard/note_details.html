@@ -15,6 +15,25 @@
       <p>{{ note.content }}</p>
     </div>
 
+    <div class="note-summary-section">
+      {% if note.summary %}
+      <h3>AI Summary</h3>
+      <p>{{ note.summary }}</p>
+      {% else %}
+      <p class="no-summary-text">No summary generated yet.</p>
+      {% endif %}
+
+      <form
+        action="{{ url_for('notes.summarize_note', note_id=note.id) }}"
+        method="POST"
+      >
+        <button type="submit" class="btn-secondary">
+          {% if note.summary %}Regenerate Summary{% else %}Generate Summary{%
+          endif %}
+        </button>
+      </form>
+    </div>
+
     <div class="note-actions">
       <a
         href="{{ url_for('notes.edit_note', note_id=note.id) }}"
@@ -35,6 +54,12 @@
           Delete
         </button>
       </form>
+      <a
+        href="{{ url_for('notes.export_note', note_id=note.id) }}"
+        class="btn-primary"
+      >
+        Export as PDF
+      </a>
 
       <a href="{{ url_for('main.dashboard') }}" class="btn-secondary">
         Back to Dashboard
