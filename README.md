@@ -4,15 +4,22 @@ SmartNotes AI is a simple note-taking web application built with Flask. It allow
 
 ## Features
 
+## Features
+
 - 🔐 User authentication (Signup / Login / Logout) with hashed passwords
 - 📊 Protected dashboard showing user stats and notes overview
-- 📝 Create, view, and manage notes
+- 📝 Full CRUD functionality for notes (create, view, edit, delete)
+- 🔍 Search functionality to quickly find notes
+- 🤖 AI-powered note summarization (extractive text summarization algorithm)
+- 📄 Export notes as PDF
+- 📱 Fully responsive design (mobile, tablet, desktop)
 - 💾 SQLite database with SQLAlchemy ORM
-- 🎨 Responsive UI built with HTML, CSS, and JavaScript
+- 🎨 Clean, modern UI built with HTML, CSS, and JavaScript
 
 ## Tech Stack
 
 - **Backend:** Flask, Flask-SQLAlchemy, Flask-Login, Flask-Bcrypt
+- **PDF Generation:** fpdf2
 - **Database:** SQLite
 - **Frontend:** HTML, CSS, JavaScript
 
@@ -75,8 +82,6 @@ SmartNotes-AI/
 ## Screenshots
 
 <img width="1887" height="1021" alt="image" src="https://github.com/user-attachments/assets/67f79e48-e30a-4558-98af-7c2eb95ee2d7" />
-
-
 
 ## License
 
